@@ -19,7 +19,7 @@ echo "	gtkwave sim/$NAME.vcd" >> Makefile
 echo "clean:" >> Makefile
 echo "	rm sim/$NAME.exe sim/$NAME.vcd" >> Makefile
 
-cd "src"
+cd src
 touch "$NAME.v"
 echo "module ${NAME}(" >> $NAME.v
 echo "	);" >> $NAME.v
@@ -30,4 +30,8 @@ cd tb
 touch "tb_${NAME}.v"
 echo "module tb();" >> tb_$NAME.v
 echo "endmodule" >> tb_$NAME.v
+cd ..
+
+cd sim
+touch .gitkeep
 cd ..
