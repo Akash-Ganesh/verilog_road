@@ -12,12 +12,12 @@ echo "./tb/tb_${NAME}.v" >> filelist.f
 
 touch "Makefile"
 echo "compile:" >> Makefile
-echo "	iverilog -o sim/$NAME.exe -f filelist.f" >> Makefile
+echo "	iverilog -o ./sim/$NAME.exe -f filelist.f" >> Makefile
 echo "	./sim/$NAME.exe" >> Makefile
 echo "wave:" >> Makefile
-echo "	gtkwave sim/$NAME.vcd" >> Makefile
+echo "	gtkwave ./sim/$NAME.vcd" >> Makefile
 echo "clean:" >> Makefile
-echo "	rm sim/$NAME.exe sim/$NAME.vcd" >> Makefile
+echo "	rm ./sim/$NAME.exe ./sim/$NAME.vcd" >> Makefile
 
 cd src
 touch "$NAME.v"

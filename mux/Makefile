@@ -1,7 +1,7 @@
 compile:
-	iverilog -o sim/mux.exe -f filelist.f
+	iverilog -o ./sim/mux.exe -f filelist.f
 	./sim/mux.exe
 wave:
-	gtkwave sim/mux.vcd
+	gtkwave ./sim/mux.vcd
 clean:
-	rm sim/*
+	rm ./sim/*
