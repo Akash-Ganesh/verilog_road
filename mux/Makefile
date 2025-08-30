@@ -4,4 +4,4 @@ compile:
 wave:
 	gtkwave sim/mux.vcd
 clean:
-	rm sim/mux.exe sim/mux.vcd
+	rm sim/*
