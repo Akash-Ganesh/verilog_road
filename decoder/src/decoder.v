@@ -13,11 +13,11 @@ module decoder #(
 		if (en)
 			op = 0;
 		else
-		for (i=0; i<OP_SIZE; i = i+1) begin 
-			if (i==a)
-				op[i] = 1'b1;
-			else 
-				op[i] = 1'b0;
-		end
+			for (i=0; i<OP_SIZE; i = i+1) begin 
+				if (i==a)
+					op[i] = 1'b1;
+				else 
+					op[i] = 1'b0;
+			end
 	end
 endmodule
