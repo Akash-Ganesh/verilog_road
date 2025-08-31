@@ -13,7 +13,7 @@ module encoder #(
 			op = 0;
 		else begin
 			op = 0;
-			for (i=N-1; i>=0; i = i-1) begin
+			for (i=0; i<N; i = i+1) begin
 				if (a[i]) begin
 					if (PRIORITY_ENCODER) begin
 						op = i;
