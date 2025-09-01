@@ -1,11 +1,11 @@
 module encoder #(
-		parameter N = 4,
+		parameter IP_WIDTH = 4,
 		parameter PRIORITY_ENCODER = 0
 	)
 	(
 		input en,
-		input [N-1:0] a,
-		output reg [$clog2(N)-1:0] op
+		input [IP_WIDTH-1:0] a,
+		output reg [$clog2(IP_WIDTH)-1:0] op
 	);
 	integer i;
 	always @(*) begin 
@@ -13,7 +13,7 @@ module encoder #(
 			op = 0;
 		else begin
 			op = 0;
-			for (i=0; i<N; i = i+1) begin
+			for (i=0; i<IP_WIDTH; i = i+1) begin
 				if (a[i]) begin
 					if (PRIORITY_ENCODER) begin
 						op = i;

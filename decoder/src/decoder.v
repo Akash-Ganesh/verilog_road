@@ -1,19 +1,19 @@
 module decoder #(
-		parameter N = 2
+		parameter IP_WIDTH = 2
 	)
 	(
 		input en,
-		input [N-1:0] a,
-		output reg [(1<<N)-1:0] op
+		input [IP_WIDTH-1:0] a,
+		output reg [(1<<IP_WIDTH)-1:0] op
 	);
-	localparam OP_SIZE = 1<<N;
+	localparam OP_WIDTH = 1<<IP_WIDTH;
 
 	integer i;
 	always @(*) begin
 		if (en)
 			op = 0;
 		else
-			for (i=0; i<OP_SIZE; i = i+1) begin 
+			for (i=0; i<OP_WIDTH; i = i+1) begin 
 				if (i==a)
 					op[i] = 1'b1;
 				else 

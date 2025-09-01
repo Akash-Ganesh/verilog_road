@@ -1,18 +1,18 @@
 `timescale 1ns/1ps
 
 module tb #(
-	parameter N = 4,
-	parameter P = 1
+	parameter IP_WIDTH = 4,
+	parameter PRIORITY_ENCODER = 0
 	) ();
-	localparam OP_SIZE = $clog2(N);
+	localparam OP_SIZE = $clog2(IP_WIDTH);
 
 	reg en;
-	reg [N-1:0] a;
+	reg [IP_WIDTH-1:0] a;
 	wire [OP_SIZE-1:0] op;
 
 	encoder #(
-		.N(N),
-		.PRIORITY_ENCODER(P)
+		.IP_WIDTH(IP_WIDTH),
+		.PRIORITY_ENCODER(PRIORITY_ENCODER)
 	) dut (
 		.en(en),
 		.a(a),
@@ -25,19 +25,19 @@ module tb #(
 		$dumpfile("sim/encoder.vcd");
 		$dumpvars(0);
 		en = 0;
-		for (j=0; j<N; j = j+1) begin
+		for (j=0; j<IP_WIDTH; j = j+1) begin
 			a = 0;
 			a[j] = 1'b1;
 			#10;
 		end
 		en = 1;
-		for (j=0; j<N; j = j+1) begin
+		for (j=0; j<IP_WIDTH; j = j+1) begin
 			a = 0;
 			a[j] = 1'b1;
 			#10;
 		end
 		en = 0;
-		for (j=0; j<(1<<N); j = j+1) begin
+		for (j=0; j<(1<<IP_WIDTH); j = j+1) begin
 			a = j;
 			#10;
 		end
