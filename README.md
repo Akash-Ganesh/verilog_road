@@ -10,6 +10,7 @@
 - `comparator/` - Comparator
 - `ripple_adder/` - Ripple-carry adder using the full_adder module
 - `alu/` - Arithmetic Logic Unit
+- `hamming_generator/` - Hamming code generator
 
 ---
 

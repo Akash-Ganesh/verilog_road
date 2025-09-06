@@ -10,15 +10,6 @@ module hamming_generator #(
 	integer i;
 	integer j;
 
-	initial begin
-		j=3;
-		for (i=3; i<=OP_WIDTH; i=i+1) begin
-			op[i] = data[i-j];
-			if ( 1<<$clog2(i) == i )
-				j = j+1;
-		end
-	end
-
 	always @(*) begin
 		j=3;
 		for (i=3; i<=OP_WIDTH; i=i+1) begin
