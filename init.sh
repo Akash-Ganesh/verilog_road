@@ -30,9 +30,9 @@ cd tb
 touch "tb_${NAME}.v"
 echo "module tb();" >> tb_$NAME.v
 echo "	initial begin" >> tb_$NAME.v
-echo "		$dumpfile(\"sim/${NAME}.vcd\");" >> tb_$NAME.v
-echo "		$dumpvars(0);" >> tb_$NAME.v
-echo "		$finish;" >> tb_$NAME.v
+echo "		\$dumpfile(\"sim/${NAME}.vcd\");" >> tb_$NAME.v
+echo "		\$dumpvars(0);" >> tb_$NAME.v
+echo "		\$finish;" >> tb_$NAME.v
 echo "	end" >> tb_$NAME.v
 echo "endmodule" >> tb_$NAME.v
 cd ..
