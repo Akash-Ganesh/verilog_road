@@ -13,8 +13,9 @@
 - `hamming_generator/` - Hamming code generator
 - `hamming_checker/` - Hamming code checker
 - `sr_latch/` - SR Latch and D Latch
-- `dff/` - D Flip Flop
-- `tff/` - T Flip Flop
+- `dff/` - D Flip Flop with an asynchronous clear
+- `tff/` - T Flip Flop with an asynchronous clear
+- `jkff/` - JK Flip Flop
 
 ---
 
