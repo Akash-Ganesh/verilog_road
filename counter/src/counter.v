@@ -1,6 +1,6 @@
 module counter #(
 		parameter N_WIDTH = 4,
-		parameter UPbarDOWN = 0,
+		parameter DOWNEN = 0,
 		parameter MOD = (1<<N_WIDTH)
 	)
 	(
@@ -13,7 +13,7 @@ module counter #(
 		if (reset==1)
 			y <= 0;
 		else begin
-			if (UPbarDOWN == 0)
+			if (DOWNEN == 0)
 				y <= (y+1)%MOD;
 			else begin
 				if (y==0)

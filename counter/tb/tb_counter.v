@@ -9,7 +9,7 @@ module tb();
 
 	counter #(
 		.N_WIDTH(N_WIDTH),
-		.UPbarDOWN(1)
+		.DOWNEN(0)
 	) dut (
 		.incr(incr),
 		.reset(reset),
