@@ -16,6 +16,8 @@
 - `dff/` - D Flip Flop with an asynchronous clear
 - `tff/` - T Flip Flop with an asynchronous clear
 - `jkff/` - JK Flip Flop
+- `register/` - Register with shifting
+- `ram/` - RAM
 
 ---
 
