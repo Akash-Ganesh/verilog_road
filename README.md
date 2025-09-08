@@ -18,6 +18,9 @@
 - `jkff/` - JK Flip Flop
 - `register/` - Register with shifting
 - `ram/` - RAM
+- `rom/` - ROM
+- `fifo/` - Queue
+- `lifo/` - Stack
 
 ---
 
